@@ -1,8 +1,9 @@
 # MovaApp
 
-$ brew install libxml2
-$ mint install SwiftGen/SwiftGen
+brew install libxml2
 
-$ mint install realm/SwiftLint
+mint install SwiftGen/SwiftGen
+
+mint install realm/SwiftLint
 
 carthage update
