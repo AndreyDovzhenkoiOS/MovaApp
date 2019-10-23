@@ -1,0 +1,16 @@
+//
+//  Localizable.strings
+//  MovaApp
+//
+//  Created by Andrey Dovzhenko on 10/23/19.
+//  Copyright © 2019 Andrey Dovzhenko. All rights reserved.
+//
+
+//Alerts
+"alert.title" = "Message";
+"alert.message" = "Something went wrong";
+"alert.action" = "Ok";
+
+//Search
+"search_title" = "Search Images";
+"search_placeholder" = "Search";
