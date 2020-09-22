@@ -64,6 +64,7 @@ final class RequestProvider: RequestProviderProtocol {
         components.host = "api.unsplash.com"
         components.path = target.path
         components.queryItems = target.parameters.map { URLQueryItem(name: $0, value: $1) }
+        print(components.url)
         return components.url
     }
 

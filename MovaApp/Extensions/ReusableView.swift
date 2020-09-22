@@ -23,14 +23,11 @@ extension UITableViewCell: ReusableView {}
 extension UITableViewHeaderFooterView: ReusableView {}
 
 extension UITableView {
-    func register<T>(_: T.Type) where T: ReusableView {
-        register(T.self, forCellReuseIdentifier: T.defaultReuseIdentifier)
+    func register<T: ReusableView>(_: T.Type) {
+        register(T.self, forCellReuseIdentifier: T.reuseIdentifier)
     }
 
-    func dequeueReusableCell<T>(for indexPath: IndexPath) -> T where T: ReusableView {
-        guard let cell = dequeueReusableCell(withIdentifier: T.defaultReuseIdentifier, for: indexPath) as? T else {
-            fatalError(T.defaultReuseIdentifier)
-        }
-        return cell
+    func dequeueReusableCell<T: UITableViewCell>(for indexPath: IndexPath) -> T {
+        return (dequeueReusableCell(withIdentifier: T.reuseIdentifier) as? T) ?? T()
     }
 }
